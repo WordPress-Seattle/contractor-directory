@@ -1,5 +1,13 @@
 <?php
 
+/*
+ * @todo Add rating to column on listing page
+ * @todo Add rating metabox
+ * @todo Add 5 star to rating meta box
+ * @todo Add "will hire again" to rating meta box
+ * @todo Create front end submission forms
+ */
+
 class WPSeaUserRating {
     
     
@@ -12,8 +20,8 @@ class WPSeaUserRating {
     
     public function registerPostType() {
         $labels = array(
-            'name' => __('Contractor Rating'),
-            'singular_name' => __('Contractor Rating'),
+            'name' => __('User Rating'),
+            'singular_name' => __('User Rating'),
             'add_new' => __('New Rating'),
             'add_new_item' => __('Add New Rating'),
             'edit_item' => __('Edit Rating'),
@@ -24,7 +32,7 @@ class WPSeaUserRating {
             'not_found' =>  __('No Ratings found'),
             'not_found_in_trash' => __('No Ratings found in Trash'),
             'parent_item_colon' => '',
-            'menu_name' => 'Contractor Rating'
+            'menu_name' => 'User Rating'
 
         );
         $args = array(
