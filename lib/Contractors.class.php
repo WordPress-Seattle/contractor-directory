@@ -23,6 +23,8 @@ class Contractors {
             // Save additional fields
             add_action( 'personal_options_update', array( &$this, 'saveAdditionalFields' ) );
             add_action( 'edit_user_profile_update', array( &$this, 'saveAdditionalFields' ) );
+            
+            add_shortcode( 'contractors', array( &$this, 'contractorShortcode' ) );
     }
     
     public function find( $Args = null ) {
@@ -174,5 +176,9 @@ class Contractors {
         update_usermeta( $UserId, 'i_do_user_training', $_POST['i_do_user_training'] );
         
         
+    }
+    
+    public function contractorShortcode() {
+        return "Hello World";
     }
 } // end class
