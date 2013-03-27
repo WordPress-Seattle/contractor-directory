@@ -123,6 +123,9 @@ class Contractors {
         } else {
             $i_do_user_training = '';
         }
+        
+        $specialties = get_the_author_meta( 'specialties', $User->ID );
+        
         ?>
 
 	<h3>Contact Directory Options</h3>
@@ -156,7 +159,7 @@ class Contractors {
 			<th><label for="specialties">I specialize in</label></th>
 
 			<td>
-                            <label><textarea name="specialties" id="specialties"></textarea> </label>
+                            <label><textarea name="specialties" id="specialties"><?php echo esc_textarea($specialties); ?></textarea> </label>
 			</td>
 		</tr>
 
@@ -183,10 +186,15 @@ class Contractors {
         if( !isset( $_POST['i_do_user_training'] ) ) $_POST['i_do_user_training'] = 'off';
         update_usermeta( $UserId, 'i_do_user_training', $_POST['i_do_user_training'] );
         
+        if( !isset( $_POST['specialties'] ) ) $_POST['specialties'] = '';
+        update_usermeta( $UserId, 'specialties', $_POST['specialties'] );
+        
         
     }
     
     public function contractorShortcode() {
+        //$user = get_user( $_GET["ID"] );
+        
         return "Hello World!";
     }
 } // end class
