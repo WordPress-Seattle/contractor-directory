@@ -10,6 +10,7 @@ License:
 License URI: 
 Text Domain: contractor-directory
 */
+
 define( 'CONTRACTOR_DIRECTORY_TEXTDOMAIN', 'contractor-directory' );
 define( 'CONTRACTOR_DIRECTORY_PLUGIN_DIR', trailingslashit( dirname( __FILE__) ) );
 define( 'CONTRACTOR_DIRECTORY_PLUGIN_URL', trailingslashit ( WP_PLUGIN_URL . "/" . basename( __DIR__  ) ) );

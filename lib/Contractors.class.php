@@ -23,6 +23,9 @@ class Contractors {
             // Save additional fields
             add_action( 'personal_options_update', array( &$this, 'saveAdditionalFields' ) );
             add_action( 'edit_user_profile_update', array( &$this, 'saveAdditionalFields' ) );
+           
+            // Add the contract directory styles
+            add_action( 'wp_enqueue_scripts', array( &$this, 'addFrontEndStyle' ) );
             
             add_shortcode( 'contractors', array( &$this, 'contractorShortcode' ) );
     }
@@ -71,6 +74,13 @@ class Contractors {
          // JS to hide personal options
         wp_register_script('wpsea-user-personal-options', CONTRACTOR_DIRECTORY_PLUGIN_DIR . 'js/wp-admin.js', array('jquery'));
         wp_enqueue_script('wpsea-user-personal-options');
+           
+    }
+    
+  public function addFrontEndStyle() {
+  	// Add plugin CSS
+       wp_register_style('wpsea-contractor-directory', CONTRACTOR_DIRECTORY_PLUGIN_DIR .'css/contractor-directory.css');
+        wp_enqueue_style('wpsea-contractor-directory');
            
     }
     
@@ -204,13 +214,17 @@ class Contractors {
         } else {
            $contractors = $this->find(); 
         }
-        
+      
+     
         $i = 1;
         
         ob_start();
         
         foreach($contractors as $c) {
-            $evenOdd = $i % 2 == 0 ? "even": "odd";
+        	        
+
+            $evenOdd = $i % 2 == 0 ? "even" : "odd";
+            $i++;
             $id = $c->ID;
             include( WPSEA_USER_PLUGIN_DIR . "views/contractors.php" );
         }

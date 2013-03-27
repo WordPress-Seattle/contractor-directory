@@ -1,0 +1,80 @@
+/*
+    Styles for Contractor Directory
+    
+*/
+.contractor {
+  border: 1px solid #CCCCCC;
+  border-radius: 1em 1em 1em 1em;
+  margin-bottom: 0.5em;
+  padding: 1em;
+}
+.contractor.odd {
+    background-color: #EEEEEE;
+}
+
+.contractor p.avatar {
+    float: left;
+    padding-right: 1em;
+    margin-bottom: 0;
+}
+
+.contractor p.display-name {
+	margin:0;
+	line-height: 1;
+	font-size: 2em;
+	color: #666666;
+}
+
+.contractor ul.skills{
+	list-style:none;
+	padding-bottom:2em;
+	margin:0;
+
+}
+.contractor ul.skills li{
+   float: left;
+   padding-right: 0.6em;
+   font-weight:700;
+}
+.contractor ul.skills li.design{
+ color:#222;
+}
+.contractor ul.skills li.theming{
+  color:#333;
+}
+.contractor ul.skills li.developement{
+  color:#444;
+}
+
+.contractor ul.skills li.user-training{
+  color:#555;
+}
+  
+.contractor ul.contractor-social{
+	list-style:none;
+	margin:0;
+}
+.contractor ul.contractor-social li{
+   float: left;
+   padding-right: 0.6em;
+   font-size: 0.75em;
+}
+.contractor ul.contractor-social li a{
+	color: #222222;;
+}
+
+.contractor ul.contractor-social li a:hover,
+.contractor ul.contractor-social li a:active,
+.contractor ul.contractor-social li a:focus {
+	color: #909090;;;
+}
+
+
+
+.contractor .clearfix:after {
+   content: " "; /* Older browser do not support empty content */
+   visibility: hidden;
+   display: block;
+   height: 0;
+   clear: both;
+}
