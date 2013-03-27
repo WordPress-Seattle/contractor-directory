@@ -195,8 +195,15 @@ class Contractors {
         
     }
     
-    public function contractorShortcode() {
-        $contractors = $this->find();
+    public function contractorShortcode( $atts ) {
+        
+        if( ! empty( $atts["id"] ) ) {
+            $user = get_userdata($atts["id"]);
+            $this->populateContractor($user);
+            $contractors = array($user);
+        } else {
+           $contractors = $this->find(); 
+        }
         
         $i = 1;
         
@@ -207,9 +214,7 @@ class Contractors {
             $id = $c->ID;
             include( WPSEA_USER_PLUGIN_DIR . "views/contractors.php" );
         }
-        
-        
-        
+             
         return ob_get_clean();
     }
 } // end class
