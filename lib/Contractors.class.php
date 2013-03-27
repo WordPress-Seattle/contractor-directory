@@ -149,6 +149,14 @@ class Contractors {
                             <br/><br/><span class="description">Check all that apply</span>
 			</td>
 		</tr>
+		
+		<tr>
+			<th><label for="specialties">I specialize in</label></th>
+
+			<td>
+                            <label><textarea name="specialties" id="specialties"></textarea> </label>
+			</td>
+		</tr>
 
 	</table>
         <?php
