@@ -14,6 +14,10 @@ define( 'CONTRACTOR_DIRECTORY_TEXTDOMAIN', 'contractor-directory' );
 define( 'CONTRACTOR_DIRECTORY_PLUGIN_DIR', trailingslashit( dirname( __FILE__) ) );
 define( 'CONTRACTOR_DIRECTORY_PLUGIN_URL', trailingslashit ( WP_PLUGIN_URL . "/" . basename( __DIR__  ) ) );
 define( 'CONTRACTOR_DIRECTORY_PLUGIN_FILE', CONTRACTOR_DIRECTORY_PLUGIN_DIR . basename( __DIR__  ) . ".php" );
+define( 'WPSEA_USER_TEXTDOMAIN', 'wpsea-user' );
+define( 'WPSEA_USER_PLUGIN_DIR', trailingslashit( dirname( __FILE__) ) );
+define( 'WPSEA_USER_PLUGIN_URL', trailingslashit ( WP_PLUGIN_URL . "/" . basename( __DIR__  ) ) );
+define( 'WPSEA_USER_PLUGIN_FILE', WPSEA_USER_PLUGIN_DIR . basename( __DIR__  ) . ".php" );
 
 require_once( CONTRACTOR_DIRECTORY_PLUGIN_DIR . 'lib/bl/bl-includes.php' ); // Required to setup bl functionality
 
@@ -45,7 +49,8 @@ if( !class_exists( 'WP_Router' ) ) { // WP_Router class does not exist
             
 }
 
-
+require_once( CONTRACTOR_DIRECTORY_PLUGIN_DIR . 'lib/Contractors.class.php' );
+new Contractors();
 
 // Ensure WP Router exists
 if( class_exists( 'WP_Router' ) ) {
