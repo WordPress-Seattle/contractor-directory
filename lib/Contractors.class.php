@@ -179,6 +179,6 @@ class Contractors {
     }
     
     public function contractorShortcode() {
-        return "Hello World";
+        return "Hello World!";
     }
 } // end class
