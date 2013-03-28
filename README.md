@@ -1,4 +1,10 @@
-bl-plugin-template
+WPSeattle Contractor Directory Plugin
 ==================
 
-Base starter template for WordPress plugins
+Description
+------
+Turns the user's profile into a listing of web contractors browsable on the front.
+
+Credits
+------
+Social Media icons from [Picas Social](http://www.picasicons.com/) by Rok Benedik and [Genericons](http://genericons.com/) by Automattic
