@@ -58,15 +58,45 @@
    float: left;
    padding-right: 0.6em;
    font-size: 0.75em;
+   height:24px;
+   display: inline-block;
 }
 .contractor ul.contractor-social li a{
-	color: #222222;;
+	color: #222222;
+padding-left:18px;
+   height:16px;
+   display: inline-block;
+   line-height: 1.2;
+
+}
+.contractor ul.contractor-social li.facebook a{
+	background:url('../images/social/facebook.png') no-repeat top left;
+}
+.contractor ul.contractor-social li.github a{
+	background:url('../images/social/github.png') no-repeat top left;
+}
+.contractor ul.contractor-social li.linkedin a{
+	background:url('../images/social/linkedin.png') no-repeat top left;
+}
+.contractor ul.contractor-social li.portfolio a{
+	background:url('../images/social/portfolio.png') no-repeat top left;
+}
+.contractor ul.contractor-social li.twitter a{
+	background:url('../images/social/twitter.png') no-repeat top left;
+}
+.contractor ul.contractor-social li.website a{
+	background:url('../images/social/website.png') no-repeat top left;
+}
+.contractor ul.contractor-social li.wporg a{
+	background:url('../images/social/wordpress.png') no-repeat top left;
 }
 
 .contractor ul.contractor-social li a:hover,
 .contractor ul.contractor-social li a:active,
 .contractor ul.contractor-social li a:focus {
-	color: #909090;;;
+	color: #222;
+	font-weight:700;
+	background-position: 0 -16px; 
 }
 
 
