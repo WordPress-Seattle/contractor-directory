@@ -46,7 +46,7 @@ class Contractors {
         return $results;
     }
     
-    public function populateContractor( &$r ) {
+    public function populateContractor( $r ) {
         $r->website = $r->user_url;
         $r->twitter = get_user_meta( $r->ID, 'twitter', true );
         $r->twitter_url = "https://twitter.com/$r->twitter";
@@ -72,14 +72,14 @@ class Contractors {
     
      public function addJs() {
          // JS to hide personal options
-        wp_register_script('wpsea-user-personal-options', CONTRACTOR_DIRECTORY_PLUGIN_DIR . 'js/wp-admin.js', array('jquery'));
+        wp_register_script('wpsea-user-personal-options', CONTRACTOR_DIRECTORY_PLUGIN_URL . 'js/wp-admin.js', array('jquery'));
         wp_enqueue_script('wpsea-user-personal-options');
            
     }
     
   public function addFrontEndStyle() {
   	// Add plugin CSS
-       wp_register_style('wpsea-contractor-directory', CONTRACTOR_DIRECTORY_PLUGIN_DIR .'css/contractor-directory.css');
+       wp_register_style('wpsea-contractor-directory', CONTRACTOR_DIRECTORY_PLUGIN_URL .'css/contractor-directory.css');
         wp_enqueue_style('wpsea-contractor-directory');
            
     }

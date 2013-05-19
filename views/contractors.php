@@ -20,7 +20,7 @@
         echo ('</ul>');
         
         echo ('<p class="bio">'.$c->bio.'</p>');
-        
+     
         echo ('<ul class="contractor-social">'); // Social links
         echo ('<li class="website"><a href="' . $c->website     .'">Website</a></li>');
         echo ('<li class="twitter" > <a href="'. $c->twitter_url .'">Twitter</a></li>');

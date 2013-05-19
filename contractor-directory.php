@@ -18,7 +18,6 @@ define( 'WPSEA_USER_PLUGIN_DIR', trailingslashit( dirname( __FILE__) ) );
 define( 'WPSEA_USER_PLUGIN_URL', trailingslashit ( WP_PLUGIN_URL . "/" . basename( __DIR__  ) ) );
 define( 'WPSEA_USER_PLUGIN_FILE', WPSEA_USER_PLUGIN_DIR . basename( __DIR__  ) . ".php" );
 
-require_once( CONTRACTOR_DIRECTORY_PLUGIN_DIR . 'lib/bl/bl-includes.php' ); // Required to setup bl functionality
 
 
 /*
