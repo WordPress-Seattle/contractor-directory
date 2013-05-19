@@ -67,6 +67,7 @@ class Contractors {
         $r->i_do_theming = get_user_meta( $r->ID, 'i_do_theming', true );
         $r->i_do_development = get_user_meta( $r->ID, 'i_do_development', true );
         $r->i_do_user_training = get_user_meta( $r->ID, 'i_do_user_training', true );
+	$r->why_hire_me = get_user_meta( $r->ID, 'why_hire_me', true );
     }
     
     
@@ -137,7 +138,7 @@ class Contractors {
             $i_do_user_training = '';
         }
         
-        $specialties = get_the_author_meta( 'specialties', $User->ID );
+        $why_hire_me = get_the_author_meta( 'why_hire_me', $User->ID );
         
         ?>
 
@@ -169,10 +170,10 @@ class Contractors {
 		</tr>
 		
 		<tr>
-			<th><label for="specialties">I specialize in</label></th>
+			<th><label for="why_hire_me">Why hire me?</label></th>
 
 			<td>
-                            <label><textarea name="specialties" id="specialties"><?php echo esc_textarea($specialties); ?></textarea> </label>
+                            <label><textarea name="why_hire_me" id="why_hire_me"><?php echo esc_textarea($why_hire_me); ?></textarea> </label>
 			</td>
 		</tr>
 
@@ -199,8 +200,8 @@ class Contractors {
         if( !isset( $_POST['i_do_user_training'] ) ) $_POST['i_do_user_training'] = 'off';
         update_usermeta( $UserId, 'i_do_user_training', $_POST['i_do_user_training'] );
         
-        if( !isset( $_POST['specialties'] ) ) $_POST['specialties'] = '';
-        update_usermeta( $UserId, 'specialties', $_POST['specialties'] );
+        if( !isset( $_POST['why_hire_me'] ) ) $_POST['why_hire_me'] = '';
+        update_usermeta( $UserId, 'why_hire_me', $_POST['why_hire_me'] );
         
         
     }

@@ -19,7 +19,7 @@
     }
     echo ('</ul>');
 
-    echo ('<p class="bio">' . $c->bio . '</p>');
+    echo ('<p class="bio">' . $c->why_hire_me . '</p>');
 
 
     echo ('<ul class="contractor-social">'); // Social links
