@@ -11,11 +11,9 @@ License URI:
 Text Domain: contractor-directory
 */
 
-define( 'CONTRACTOR_DIRECTORY_TEXTDOMAIN', 'contractor-directory' );
 define( 'CONTRACTOR_DIRECTORY_PLUGIN_DIR', trailingslashit( dirname( __FILE__) ) );
 define( 'CONTRACTOR_DIRECTORY_PLUGIN_URL', trailingslashit ( WP_PLUGIN_URL . "/" . basename( __DIR__  ) ) );
 define( 'CONTRACTOR_DIRECTORY_PLUGIN_FILE', CONTRACTOR_DIRECTORY_PLUGIN_DIR . basename( __DIR__  ) . ".php" );
-define( 'WPSEA_USER_TEXTDOMAIN', 'wpsea-user' );
 define( 'WPSEA_USER_PLUGIN_DIR', trailingslashit( dirname( __FILE__) ) );
 define( 'WPSEA_USER_PLUGIN_URL', trailingslashit ( WP_PLUGIN_URL . "/" . basename( __DIR__  ) ) );
 define( 'WPSEA_USER_PLUGIN_FILE', WPSEA_USER_PLUGIN_DIR . basename( __DIR__  ) . ".php" );
