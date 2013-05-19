@@ -220,16 +220,9 @@ class Contractors {
         $i = 1;
         
         ob_start();
+       
+        include( WPSEA_USER_PLUGIN_DIR . "views/contractors.php" );
         
-        foreach($contractors as $c) {
-        	        
-
-            $evenOdd = $i % 2 == 0 ? "even" : "odd";
-            $i++;
-            $id = $c->ID;
-            include( WPSEA_USER_PLUGIN_DIR . "views/contractors.php" );
-        }
-             
         return ob_get_clean();
     }
 } // end class
