@@ -6,12 +6,14 @@
     <?php foreach($contractors as $c) {
         	        
 
-	$evenOdd = $i % 2 == 0 ? "even" : "odd";
-	$i++;
+	//$evenOdd = $i % 2 == 0 ? "even" : "odd";
+	//$i++;
 	    ?>
-	<div class="contractor <?php echo ($evenOdd . " " . $c->ID); ?>">        
+	<div class="contractor <?php //echo ($evenOdd . " " . $c->ID); ?>">        
 	    <?php
 	    echo ('<p class="avatar">' . get_avatar($c->email) . '</p>');
+	    
+		echo ('<div class="inner">');
 	    echo ('<p class="display-name">' . $c->display_name . '</p>');
 
 	    echo ('<ul class="skills">');
@@ -50,7 +52,9 @@
 	    if (!empty($c->portfolio))
 		echo ('<li class="portfolio"> <a href="' . $c->portfolio . '">Portfolio</a></li>');
 	    echo ('</ul>');
-	    ?>
+	    
+		echo ('</div>'); 
+		?>
 	    <span class="clearfix">&nbsp;</span>
 	</div>
     <?php } // end foreach ?>

@@ -8,16 +8,19 @@
   margin-bottom: 0.5em;
   padding: 1em;
 }
-.contractor.odd {
+.contractor:nth-child(2n+1) {
     background-color: #EEEEEE;
 }
 
 .contractor p.avatar {
     float: left;
-    padding-right: 1em;
-    margin-bottom: 0;
+     margin: 0;
 }
 
+.contractor div.inner{
+    margin-left: 120px;
+  
+   }
 .contractor p.display-name {
 	margin:0;
 	line-height: 1;
@@ -62,11 +65,13 @@
    display: inline-block;
 }
 .contractor ul.contractor-social li a{
-	color: #222222;
+	color: #666666;
 padding-left:18px;
    height:16px;
    display: inline-block;
    line-height: 1.2;
+   text-decoration:none;
+   font-weight:700;
 
 }
 .contractor ul.contractor-social li.facebook a{
@@ -95,7 +100,7 @@ padding-left:18px;
 .contractor ul.contractor-social li a:active,
 .contractor ul.contractor-social li a:focus {
 	color: #222;
-	font-weight:700;
+	text-decoration:underline;
 	background-position: 0 -16px; 
 }
 
